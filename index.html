@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | WebsiteTest</title>
+    <title>Unity WebGL Player | Test</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WebsiteTest</div>
+        <div id="unity-build-title">Test</div>
       </div>
     </div>
     <script>
@@ -56,15 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Website.loader.js";
+      var loaderUrl = buildUrl + "/WebsiteV2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Website.data",
-        frameworkUrl: buildUrl + "/Website.framework.js",
-        codeUrl: buildUrl + "/Website.wasm",
+        dataUrl: buildUrl + "/WebsiteV2.data.gz",
+        frameworkUrl: buildUrl + "/WebsiteV2.framework.js.gz",
+        codeUrl: buildUrl + "/WebsiteV2.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "omikami_draws",
-        productName: "WebsiteTest",
-        productVersion: "1.0",
+        companyName: "DefaultCompany",
+        productName: "Test",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
@@ -82,8 +82,8 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
